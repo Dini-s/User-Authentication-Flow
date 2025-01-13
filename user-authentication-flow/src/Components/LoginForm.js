@@ -26,18 +26,15 @@ const LoginForm = () => {
     return (
         <div>
             <form onSubmit={handleLogin}>
-                <h1>Welcome To User Anthentication Flow</h1>
-                <p>
-                    <label>User Name : </label>
-                    <input type="text" name="username" value={userCredentials.username} onChange={handleInput} />
-                </p>
-                <p>
-                    <label>Password : </label>
-                    <input type="password" name="password" value={userCredentials.password} onChange={handleInput} />
-                </p>
-                <p>
-                    <button type="submit">Log In</button>
-                </p>
+
+
+                <label for="chk" aria-hidden="true">Log In</label>
+                <input type="text" name="username" value={userCredentials.username} onChange={handleInput} placeholder="User Name" />
+
+                <input type="password" name="password" value={userCredentials.password} onChange={handleInput} placeholder="Password" />
+
+                <button type="submit">Log In</button>
+
             </form>
         </div>
     )

@@ -41,22 +41,18 @@ const SignUpForm = () => {
     return (
         <div>
             <form onSubmit={handleSignIn}>
-                <p>
-                    <label>UserName : </label>
-                    <input type="text" name="username" value={userInfo.username} onChange={handleInput} />
-                </p>
-                <p>
-                    <label>Password : </label>
-                    <input type="password" name="password" value={userInfo.password} onChange={handleInput} />
-                </p>
-                <p>
-                    <label>Confirm Password : </label>
-                    <input type="password" name="confirmedPw" value={confirmedPw} onChange={(e) => setConfiredPw(e.target.value)} />
-                </p>
 
-                <p>
-                    <button type="submit">Sign In</button>
-                </p>
+                <label for="chk" aria-hidden="true">Sign Up </label>
+                <input type="text" name="username" value={userInfo.username} onChange={handleInput} placeholder="UserName" />
+
+                <input type="password" name="password" value={userInfo.password} onChange={handleInput} placeholder="Password" />
+
+                <input type="password" name="confirmedPw" value={confirmedPw} onChange={(e) => setConfiredPw(e.target.value)} placeholder="Confirm Password" />
+
+
+
+                <button type="submit">Sign In</button>
+
             </form>
         </div>
     )
