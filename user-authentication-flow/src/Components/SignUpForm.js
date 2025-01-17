@@ -42,7 +42,7 @@ const SignUpForm = () => {
         <div>
             <form onSubmit={handleSignIn}>
 
-                <label for="chk" aria-hidden="true">Sign Up </label>
+                <label htmlFor="chk" aria-hidden="true">Sign Up </label>
                 <input type="text" name="username" value={userInfo.username} onChange={handleInput} placeholder="UserName" />
 
                 <input type="password" name="password" value={userInfo.password} onChange={handleInput} placeholder="Password" />

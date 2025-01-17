@@ -28,7 +28,7 @@ const LoginForm = () => {
             <form onSubmit={handleLogin}>
 
 
-                <label for="chk" aria-hidden="true">Log In</label>
+                <label htmlFor="chk" aria-hidden="true">Log In</label>
                 <input type="text" name="username" value={userCredentials.username} onChange={handleInput} placeholder="User Name" />
 
                 <input type="password" name="password" value={userCredentials.password} onChange={handleInput} placeholder="Password" />
