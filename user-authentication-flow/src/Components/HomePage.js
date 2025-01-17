@@ -2,14 +2,20 @@ import useNetworkConnection from "../CustomHook/useNetworkConnection";
 import "./../Styles/HomePage.css"
 import LoginForm from "./LoginForm";
 import SignUpForm from "./SignUpForm";
+import Theme from "./Theme";
 
 const HomePage = () => {
 
     const isOnline = useNetworkConnection();
 
+
+
+    //ofline button handling
     const ConnectionHandle = () => {
         window.location.reload();
     }
+
+
     if (!isOnline) {
         return (
             <div className="con-less">
@@ -21,6 +27,7 @@ const HomePage = () => {
     }
     return (
         <div>
+            <Theme />
 
             <div className="main">
                 <input type="checkbox" id="chk" aria-hidden="true" />
